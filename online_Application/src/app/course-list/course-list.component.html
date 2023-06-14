@@ -1,0 +1,40 @@
+<h1>Course List</h1>
+
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th>Course Code</th>
+          <th>Course Name</th>
+          <th>Department No</th>
+          <th>School Name</th>
+          <th>Duration(Years)</th>
+
+      </tr>
+  </thead>
+  <tbody>
+    
+         <tr *ngFor="let course of courses">
+              <td>{{course.CourseCode}}</td>
+              <td>{{course.CourseName}}</td>
+              <td>{{course.DepartmentNo}}</td>
+              <td>{{course.SchoolName}}</td>
+              <td>{{course.DurationYears}}</td>
+
+          <td>
+
+                <button (click)="applicant_formComponent()">Apply</button>
+
+                            <!-- Render the target component based on the flag -->
+                    <app-applicant-form *ngIf="applicant_form"></app-applicant-form>
+
+        
+              <!-- <button type="button" class="btn btn-light mr-1"
+              (click)="applyClick()"
+              >
+                  Apply
+              </button> -->
+          </td>
+      </tr>
+  </tbody>
+</table>
+
