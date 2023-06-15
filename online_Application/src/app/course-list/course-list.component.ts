@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { MatDialog } from '@angular/material/dialog';
+import { ApplicantFormComponent } from '../applicant-form/applicant-form.component';
 
 @Component({
   selector: 'app-course-list',
@@ -11,19 +13,22 @@ export class CourseListComponent implements OnInit {
   courses: any=[];
   applicant_form = false;
 
-  applicant_formComponent(): void {
-    this.applicant_form = !this.applicant_form;
+  constructor(private courseService: DataService,
+              private dialog: MatDialog) { }
+
+  applyClick(): void {
+    this.dialog.open(ApplicantFormComponent, {
+      width: '500px',
+      disableClose: true
+      });
   }
-
-  constructor(private courseService: DataService) { }
-
-
   ngOnInit(): void {
     this.refreshCourseList();
   }
-  applyClick(){
-    this.courseService.addApplicant(eval).subscribe(data=>{this.courses=data});
-  }
+  // applyClick(){
+  //   this.applicant_form
+  // }
+
   refreshCourseList(){
     this.courseService.getCourses().subscribe(data=>{this.courses=data});
   }

@@ -1,1 +1,16 @@
-<p>applicant-form works!</p>
+<h2 mat-dialog-title>Application Details</h2>
+<mat-dialog-content>
+  <div>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Course:</strong> {{ courseName }}</p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button color="primary" (click)="apply()">Apply</button>
+</mat-dialog-actions>
+
+
+
+  

@@ -21,10 +21,10 @@ export class ApplicationComponent implements  OnInit {
 
   }
 
-  deleteClick(item: any){
+  deleteClick(item:any){
     if(confirm("Are you sure you want to delete the applicant??")){
 
-      this.applicantservice.deleteApplicant(item.ApplicantNo).subscribe(data=>{alert(data.toString());
+      this.applicantservice.deleteApplicant(item.key).subscribe(data=>{alert(data.toString());
       
         this.refreshAppliantList()
       })

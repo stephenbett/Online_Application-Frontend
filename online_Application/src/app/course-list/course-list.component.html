@@ -22,12 +22,9 @@
 
           <td>
 
-                <button (click)="applicant_formComponent()">Apply</button>
+            <button mat-raised-button (click)="applyClick()">Apply</button>
 
-                            <!-- Render the target component based on the flag -->
-                    <app-applicant-form *ngIf="applicant_form"></app-applicant-form>
 
-        
               <!-- <button type="button" class="btn btn-light mr-1"
               (click)="applyClick()"
               >
@@ -37,4 +34,5 @@
       </tr>
   </tbody>
 </table>
+
 
