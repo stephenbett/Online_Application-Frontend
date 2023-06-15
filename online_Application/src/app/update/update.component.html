@@ -1,1 +1,17 @@
-<p>update works!</p>
+<h2 mat-dialog-title>Update Application</h2>
+<mat-dialog-content style="color: #020202; background-color: #f2f2f2;">
+  <div>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Course:</strong> {{ courseName }}</p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions style="justify-content: flex-end;">
+  <button mat-button mat-dialog-close style="color: #faf9f9; background-color: rgb(126, 126, 133);">Cancel</button>
+  <button mat-button color="primary" style="color: #fff; background-color: blue;" (click)="apply()"> Save</button>
+</mat-dialog-actions>
+
+
+
+
+   

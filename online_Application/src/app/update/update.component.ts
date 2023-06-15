@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class UpdateComponent {
 
+  public data: any
+  get name(): string {
+    return this.data.name;
+  }
+
+  get email(): string {
+    return this.data.email;
+  }
+
+  get courseName(): string {
+    return this.data.courseName;
+  }
+
+  apply(): void {
+    // Add your apply logic here
+  }
+
 }

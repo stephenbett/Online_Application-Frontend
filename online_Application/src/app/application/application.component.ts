@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
+import { UpdateComponent } from '../update/update.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-application',
@@ -10,16 +12,18 @@ export class ApplicationComponent implements  OnInit {
 
   applicants:any= [];
 
-  constructor(private applicantservice : DataService)
-  {
-
-  }
+  constructor(private applicantservice : DataService,
+              private dialog: MatDialog )
+  {}
   ngOnInit(): void {
     this.refreshAppliantList()
   }
   updateClick(): void{
-
-  }
+    this.dialog.open(UpdateComponent, {
+      width: '500px',
+      disableClose: true
+      });
+  }  
 
   deleteClick(item:any){
     if(confirm("Are you sure you want to delete the applicant??")){

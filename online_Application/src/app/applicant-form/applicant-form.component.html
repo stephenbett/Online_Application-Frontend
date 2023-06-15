@@ -1,15 +1,16 @@
 <h2 mat-dialog-title>Application Details</h2>
-<mat-dialog-content>
+<mat-dialog-content style="color: #020202; background-color: #f2f2f2;">
   <div>
     <p><strong>Name:</strong> {{ name }}</p>
     <p><strong>Email:</strong> {{ email }}</p>
     <p><strong>Course:</strong> {{ courseName }}</p>
   </div>
 </mat-dialog-content>
-<mat-dialog-actions>
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button color="primary" (click)="apply()">Apply</button>
+<mat-dialog-actions style="justify-content: flex-end;">
+  <button mat-button mat-dialog-close style="color: #000;">Cancel</button>
+  <button mat-button color="primary" style="color: #fff; background-color: blue;" (click)="apply()">Apply    </button>
 </mat-dialog-actions>
+
 
 
 
