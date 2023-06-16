@@ -1,9 +1,12 @@
-<h2 mat-dialog-title>Application Details</h2>
+<!-- <h2 mat-dialog-title>Application Details</h2>
 <mat-dialog-content style="color: #020202; background-color: #f2f2f2;">
   <div>
-    <p><strong>Name:</strong> {{ name }}</p>
-    <p><strong>Email:</strong> {{ email }}</p>
-    <p><strong>Course:</strong> {{ courseName }}</p>
+    <p><strong>Name:</strong> {{ data.ffirstname }}</p>
+    <p><strong>middlename</strong> {{ data.middlename }}</p>
+    <p><strong>Surname:</strong> {{ data.surname }}</p>
+    <p><strong>Age:</strong> {{ data.age }}</p>
+    <p><strong>Course:</strong> {{ data.courseName }}</p>
+
   </div>
 </mat-dialog-content>
 <mat-dialog-actions style="justify-content: flex-end;">
@@ -14,4 +17,30 @@
 
 
 
-  
+   -->
+                <h1>Apply for a Course</h1>
+   <mat-dialog-content style="color: #020202; background-color: #f2f2f2;">
+    <form >
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="formData.FirstName" required>
+      <br>
+        <label for="email">Surname:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="formData.Surname" required>
+        <br>
+        <label for="email">age:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="formData.Age" required>
+        <br>
+        <label for="email">Course Name:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="formData.Course_Name"required>
+      </form>
+    </mat-dialog-content>
+      
+        <!-- Add more input fields as needed -->
+      
+        <!-- <button type="submit" (ngSubmit)="onapply()">Submit</button>
+      </form> -->
+      
+<mat-dialog-actions style="justify-content: flex-end;">
+    <button mat-button mat-dialog-close style="color: #000;">Cancel</button>
+    <button mat-button color="primary" style="color: #fff; background-color: blue;" (click)="onapply()">Apply    </button>
+</mat-dialog-actions>

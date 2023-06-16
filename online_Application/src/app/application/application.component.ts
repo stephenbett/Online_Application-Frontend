@@ -23,15 +23,16 @@ export class ApplicationComponent implements  OnInit {
       width: '500px',
       disableClose: true
       });
-  }  
+  }   
 
   deleteClick(item:any){
+    
     if(confirm("Are you sure you want to delete the applicant??")){
 
-      this.applicantservice.deleteApplicant(item.key).subscribe(data=>{alert(data.toString());
-      
-        this.refreshAppliantList()
+      this.applicantservice.deleteApplicant(item).subscribe(data=>{alert(data.toString())
       })
+      this.refreshAppliantList()
+
     }
   }
 

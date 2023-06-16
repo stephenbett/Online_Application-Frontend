@@ -10,6 +10,8 @@
     </thead>
     <tbody>
            <tr *ngFor="let application of applicants">
+                    <td>{{application.key}}</td>
+
                 <td>{{application.applicationNo}}</td>
                 <td>{{application.FirstName}}</td>
                 <td>{{application.SurnameName}}</td>
@@ -23,7 +25,7 @@
                 mat-button color="primary" style="color: #fff; background-color: blue;"  mat-raised-button (click)="updateClick()">Update</button>
              
                 <button type="button" class="btn btn-light mr-1"
-                (click)="deleteClick(application)" style="color: #fff; background-color: #f10808;"
+                (click)="deleteClick(application.key)" style="color: #fff; background-color: #f10808;"
                 >
                     Delete
                 </button>

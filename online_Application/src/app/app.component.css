@@ -1,6 +1,78 @@
-body {
+/* body {
     background-image: url('/online_Application/src/assets/image/hero-bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+  } */
+  /* .landing-page {
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
+  }
+  
+  header {
+    padding: 20px;
+    background-color: #4285f4;
+    color: #ffffff;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+   */
+
+   h3{
+      padding: 20px;
+      background-color: #4285f4;
+      color: #ffffff;
+    }
+  
+
+
+   .landing-page {
+    display: flex;
+  }
+  
+  .side-dashboard {
+    width: 200px;
+    background-color: #4285f4;
+    color: #ffffff;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li {
+    padding: 10px;
+  }
+  
+  .nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .nav-menu li a:hover {
+    text-decoration: underline;
+  }
+  
+  .main-content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
   }
   

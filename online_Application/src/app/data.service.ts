@@ -31,7 +31,7 @@ export class DataService {
     }
     
     deleteApplicant(val:any){
-      return this.http.delete(this.applicant_apiurl+'applicant/'+val);
+      return this.http.delete(this.applicant_apiurl+'applicant?key='+val);
     }
   }
   

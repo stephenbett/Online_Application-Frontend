@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Injectable } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 
@@ -8,23 +9,29 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class ApplicantFormComponent {
 
-  constructor() {}
+  constructor(private http:HttpClient) {}
+
+  formData = {
+    FirstName: '',
+    Surname:'',
+    Age:'',
+    Course_Name: ''
+  };
   
-public data: any
-  get name(): string {
-    return this.data.name;
-  }
 
-  get email(): string {
-    return this.data.email;
-  }
+  onapply() {
+    var url = 'https://localhost:44395/api/applicant';
 
-  get courseName(): string {
-    return this.data.courseName;
-  }
-
-  apply(): void {
-    // Add your apply logic here
+    this.http.post(url, this.formData).subscribe(
+      (response) => {
+        // Handle the response from the API
+        console.log(response);
+      },
+      (error) => {
+        // Handle any errors that occur during the request
+        console.error(error);
+      }
+    );
   }
 
 
